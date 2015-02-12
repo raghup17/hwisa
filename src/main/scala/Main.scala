@@ -1,5 +1,8 @@
+package hwisa
+
 object Main {
   def main(args: Array[String]) {
-    println("Hello World\n")
+    val adder = clb_add(20)
+    val s = simd(adder, 10)
   }
 }
