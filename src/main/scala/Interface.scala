@@ -1,23 +1,23 @@
 package hwisa
 
 trait Interface {
-  def en: Wire
-  def rdy: Wire
-  def sendData: Wire
-  def din: Wire
-  def dvld: Wire
-  def dout: Wire
-  def dovld: Wire
+  var en: Wire
+  var rdy: Wire
+  var sendData: Wire
+  var din: Wire
+  var dvld: Wire
+  var dout: Wire
+  var dovld: Wire
 }
 
 class SimpleInterface(in: Int, out: Int) extends Interface {
-  def en = Wire(1)
-  def rdy = Wire(1)
-  def sendData = Wire(1)
-  def dvld = Wire(1)
-  def dovld = Wire(1)
+  var en = Wire(1)
+  var rdy = Wire(1)
+  var sendData = Wire(1)
+  var dvld = Wire(1)
+  var dovld = Wire(1)
 
-  def din = Wire(in)
-  def dout = Wire(out)
+  var din = Wire(in)
+  var dout = Wire(out)
 }
 
